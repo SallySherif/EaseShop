@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.companyname.easeshop.fragment.SplashFragment"
+        android:label="@string/splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_marketplaceFragment"
+            app:destination="@id/marketplace_fragment"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/splash_fragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/marketplace_fragment"
+        android:name="com.companyname.easeshop.fragment.MarketplaceFragment"
+        android:label="@string/marketplace"
+        tools:layout="@layout/fragment_market_place">
+        <action
+            android:id="@+id/action_marketplaceFragment_to_productsFragment"
+            app:destination="@id/products_fragment"
+            app:popUpTo="@id/marketplace_fragment" />
+        <argument
+            android:name="ShowBottomNav"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_orders_fragment"
+        android:name="com.companyname.easeshop.fragment.MyOrdersFragment"
+        android:label="@string/my_orders"
+        tools:layout="@layout/fragment_my_orders">
+        <argument
+            android:name="ShowBottomNav"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cart_fragment"
+        android:name="com.companyname.easeshop.fragment.CartFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart" >
+        <argument
+            android:name="ShowBottomNav"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_account_fragment"
+        android:name="com.companyname.easeshop.fragment.MyAccountFragment"
+        android:label="@string/my_account"
+        tools:layout="@layout/fragment_my_account">
+        <argument
+            android:name="ShowBottomNav"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/products_fragment"
+        android:name="com.companyname.easeshop.fragment.ProductsFragment"
+        android:label="@string/products"
+        tools:layout="@layout/fragment_products">
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="true" />
+        <argument
+            android:name="ShowBottomNav"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

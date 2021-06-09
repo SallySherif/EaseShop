@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/marketplace_fragment"
+        android:title="@string/marketplace"
+        android:icon="@drawable/market_icon"/>
+
+    <item android:id="@+id/my_orders_fragment"
+        android:title="@string/my_orders"
+        android:icon="@drawable/orders_icon"/>
+
+    <item android:id="@+id/cart_fragment"
+        android:title="@string/cart"
+        android:icon="@drawable/cart_icon"/>
+
+    <item android:id="@+id/my_account_fragment"
+        android:title="@string/my_account"
+        android:icon="@drawable/account_icon"/>
+
+</menu>
